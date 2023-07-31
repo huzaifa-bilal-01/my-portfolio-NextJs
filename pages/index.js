@@ -22,10 +22,10 @@ export default function Home() {
               <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="" class="flex items-center">
                   <Image src="/images/aifu.png" alt="logo" width={40} height={40} />
-                  <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Portfolio</span>
+                  <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Portfolio</span>
                 </a>
                 <div class="flex items-center lg:order-2">
-                  <a href="https://nextjs-blog-website-ruby.vercel.app/" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">My Blog Site</a>
+                  <a href="https://nextjs-blog-website-ruby.vercel.app/" class="text-white hover:text-black hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-400 focus:outline-none dark:focus:ring-gray-500">My Blog Site</a>
                 </div>
               </div>
             </nav>
@@ -48,7 +48,7 @@ export default function Home() {
 
                 {/* <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> */}
               </a>
-              <a href="https://drive.google.com/file/d/12yEC_N2mPjo7DtXJ_hUHzaYLvPIQcTR1/view?usp=sharing" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 max-[768px]:mt-5">
+              <a href="https://drive.google.com/file/d/12yEC_N2mPjo7DtXJ_hUHzaYLvPIQcTR1/view?usp=sharing" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white hover:text-black border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-400 dark:hover:bg-gray-400 dark:focus:ring-gray-500 max-[768px]:mt-5">
                 View Resume
               </a>
             </div>
@@ -62,7 +62,7 @@ export default function Home() {
         <section class="bg-neutral-900 antialiased pt-5">
           <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
             <div class="max-w-2xl mx-auto text-center">
-              <h2 class="text-5xl font-extrabold leading-tight tracking-wide text-gray-900 sm:text-5xl dark:text-white">
+              <h2 class="text-5xl font-extrabold leading-tight tracking-wide text-white sm:text-5xl">
                 My Projects
               </h2>
               <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
@@ -142,7 +142,7 @@ export default function Home() {
 
         <section class="bg-neutral-900 pt-5">
           <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-            <h2 class=" pb-2 text-5xl font-extrabold leading-tight tracking-wide text-gray-900 sm:text-5xl dark:text-white">
+            <h2 class=" pb-2 text-5xl font-extrabold leading-tight tracking-wide text-white sm:text-5x">
               Testonimal
             </h2>
             <figure class="max-w-screen-md mx-auto">
@@ -150,12 +150,12 @@ export default function Home() {
                 <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor" />
               </svg>
               <blockquote>
-                <p class="text-2xl text-gray-900 dark:text-white">"I've found Next.js to be the perfect solution for both small projects and large-scale applications. It has become my go-to framework for web development, and I highly recommend it to fellow developers looking to elevate their frontend game and deliver exceptional digital experiences."</p>
+                <p class="text-2xl text-white">"I've found Next.js to be the perfect solution for both small projects and large-scale applications. It has become my go-to framework for web development, and I highly recommend it to fellow developers looking to elevate their frontend game and deliver exceptional digital experiences."</p>
               </blockquote>
               <figcaption class="flex items-center justify-center mt-6 space-x-3">
                 <Image height={20} width={20} class="w-6 h-6 rounded-full" src="/images/CTO.jpg" alt="profile picture" />
                 <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                  <div class="pr-3 font-medium text-gray-900 dark:text-white">Guillermo Rauch</div>
+                  <div class="pr-3 font-medium text-white">Guillermo Rauch</div>
                   <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CTO at LearnBoost</div>
                 </div>
               </figcaption>
@@ -174,7 +174,7 @@ export default function Home() {
               <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                   <a href="https://nextjs-blog-website-ruby.vercel.app/" class="flex items-center">
-                    <Image src="/images/aifu.png" alt="logo" width={50} height={50} /><span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">About Me</span>
+                    <Image src="/images/aifu.png" alt="logo" width={50} height={50} /><span class="self-center text-2xl font-semibold whitespace-nowrap text-white">About Me</span>
                   </a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
