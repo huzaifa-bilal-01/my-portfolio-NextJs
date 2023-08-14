@@ -99,7 +99,7 @@ export default function Home() {
         <section class="bg-white dark:bg-gray-900 antialiased pt-5">
           <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
             <div class="max-w-2xl mx-auto text-center">
-              <h2 class="text-4xl font-extrabold leading-tight tracking-wide text-orange-500 sm:text-5xl">
+              <h2 class="text-5xl font-extrabold leading-tight tracking-wide text-orange-500 sm:text-5xl">
                 My Projects
               </h2>
               <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
@@ -108,78 +108,83 @@ export default function Home() {
             </div>
 
             <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-              <div class="space-y-4">
-                <Image src="/images/blog_gen.png" width={400} height={400} alt="blog" className="rounded-md items-center justify-center inline-flex" />
-                <h3 class="text-2xl font-medium leading-tight text-slate-500">
-                  Nextjs Blog Generator
-                </h3>
-                <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-                  The Nextjs Blog Generator is designed to simplify the process managing blogs using the Next.js framework.
-                </p>
-                <a href="https://github.com/huzaifa-bilal-01/my-blog-engine.git" title=""
-                  class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                  role="button">
-                  Go to Github
-                  <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </a>
+
+              <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800">
+                <Image src="/images/blog_gen.png" width={400} height={400} alt="blog" class="w-full h-44 object-cover" />
+                <div class="p-4 space-y-2">
+                  <h3 class="text-xl font-medium text-slate-500">
+                    Nextjs Blog Generator
+                  </h3>
+                  <p class="text-md font-normal text-gray-600 dark:text-gray-300">
+                    The Nextjs Blog Generator is designed to simplify the process of managing blogs using the Next.js framework.
+                  </p>
+                  <a href="https://github.com/huzaifa-bilal-01/my-blog-engine.git" title=""
+                    class="text-white bg-primary-700 hover:bg-primary-800 inline-flex items-center px-4 py-2 text-sm font-medium rounded-md dark:bg-primary-600 dark:hover:bg-primary-700">
+                    Go to Github
+                    <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                      fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
               </div>
 
-              <div class="space-y-4">
-                <Image src="/images/fighter.jpg" width={300} height={300} alt="blog" className="rounded-md items-center justify-center inline-flex" />
 
-                <h3 class="text-2xl font-medium leading-tight text-slate-500">
-                  AI Street Fighter
-                </h3>
-                <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-                  This project contains a simple and brief AI model trained for the classic Street Fighter game.
-                </p>
-                <a href="https://github.com/huzaifa-bilal-01/SF-DeepLearningGame.git" title=""
-                  class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                  role="button">
-                  Go to Github
-                  <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </a>
+              <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800">
+                <Image src="/images/fighter.jpg" width={360} height={300} alt="fighter" class="w-full h-44 object-cover" />
+                <div class="p-4 space-y-2">
+                  <h3 class="text-xl font-medium text-slate-500">
+                    AI Street Fighter
+                  </h3>
+                  <p class="text-md font-normal text-gray-600 dark:text-gray-300">
+                    This project contains a simple and brief AI model trained for the classic Street Fighter game.
+                  </p>
+                  <a href="https://github.com/huzaifa-bilal-01/SF-DeepLearningGame.git" title=""
+                    class="text-white bg-primary-700 hover:bg-primary-800 inline-flex items-center px-4 py-2 text-sm font-medium rounded-md dark:bg-primary-600 dark:hover:bg-primary-700">
+                    Go to Github
+                    <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                      fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
               </div>
 
-              <div class="space-y-4">
-                <Image src="/images/Vet.jpg" width={330} height={330} alt="blog" className="rounded-md items-center justify-center inline-flex" />
 
-                <h3 class="text-2xl font-medium leading-tight text-slate-500">
-                  Web DEV-MERN
-                </h3>
-                <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-                  The MERN-based veteran app is a feature-rich web application designed to serve and support veterans.
-                </p>
-                <a href="https://github.com/huzaifa-bilal-01/Web-Development-MERN-Course-Project-2022.git" title=""
-                  class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                  role="button">
-                  Go to Github
-                  <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </a>
+              <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800">
+                <Image src="/images/Vet.jpg" width={330} height={330} alt="vet" class="w-full h-44 object-cover" />
+                <div class="p-4 space-y-2">
+                  <h3 class="text-xl font-medium text-slate-500">
+                    Web DEV-MERN
+                  </h3>
+                  <p class="text-md font-normal text-gray-600 dark:text-gray-300">
+                    The MERN-based veteran app is a feature-rich web application designed to serve and support veterans.
+                  </p>
+                  <a href="https://github.com/huzaifa-bilal-01/Web-Development-MERN-Course-Project-2022.git" title=""
+                    class="text-white bg-primary-700 hover:bg-primary-800 inline-flex items-center px-4 py-2 text-sm font-medium rounded-md dark:bg-primary-600 dark:hover:bg-primary-700">
+                    Go to Github
+                    <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                      fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
 
+
         <section class="bg-white dark:bg-gray-900 pt-5">
           <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-            <h2 class=" pb-2 text-3xl font-extrabold leading-tight tracking-wide text-orange-500 sm:text-5xl">
+            <h2 class=" pb-2 text-5xl font-extrabold leading-tight tracking-wide text-orange-500 sm:text-5xl">
               Testonimal
             </h2>
             <figure class="max-w-screen-md mx-auto">
