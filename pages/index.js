@@ -1,11 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import classes from './page.module.css'
-import { Fragment } from 'react'
+import { Fragment, useReducer } from 'react'
 import Head from 'next/head'
 import ContractForm from '../components/contact-form'
 import { useState, useEffect } from "react"
 import Swal from "sweetalert2";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 async function sendContactData(details) {
@@ -43,6 +45,7 @@ export default function Home() {
   const [requestError, setRequestError] = useState();
 
   useEffect(() => {
+    Aos.init();
     if (requestStatus === 'success' || requestStatus === 'error') {
       const timer = setTimeout(() => {
         setRequestStatus(null);
@@ -51,6 +54,7 @@ export default function Home() {
       return () => clearTimeout(timer);
     }
   }, [requestStatus]);
+
 
 
   async function sendMessageHandler(event) {
@@ -105,7 +109,7 @@ export default function Home() {
       </Head>
       <div>
         <section>
-          <header className="fixed w-full">
+          <header className=" w-full">
             <nav className={`${darkMode ? 'bg-slate-200' : 'bg-gray-800'} border-gray-200 px-4 lg:px-6 py-2.5 `}>
               <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="#hero" className="flex items-center">
@@ -163,7 +167,7 @@ export default function Home() {
 
         <div class={darkMode ? 'bg-white' : 'bg-gray-900'} >
 
-          <section id='hero' class=" pt-5 max-[768px]:justify-center max-[768px]:text-center max-[768px]:pt-20">
+          <section id='hero' class=" pt-5 max-[768px]:justify-center max-[768px]:text-center max-[768px]:pt-20" data-aos="zoom-in-up">
             <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
               <div class="mr-auto place-self-center lg:col-span-7">
                 <h1 className={`${darkMode ? 'text-black' : 'text-white'} text-5xl font-bold`}>Full-Stack Developer</h1>
@@ -207,7 +211,7 @@ export default function Home() {
               <h2 class="pb-4 text-5xl font-extrabold text-orange-500 sm:text-5xl">
                 GET TO KNOW ME
               </h2>
-              <div class={`${darkMode ? 'bg-slate-200 border-gray-200' : 'bg-gray-800  border-gray-700'} shadow-lg rounded-lg p-6 border  mx-auto`}>
+              <div data-aos="fade-right" class={`${darkMode ? 'bg-slate-200 border-gray-200' : 'bg-gray-800  border-gray-700'} shadow-lg rounded-lg p-6 border  mx-auto`}>
                 <p class={`${darkMode ? 'text-gray-800' : ' text-gray-300'} leading-relaxed`}>
                   Hey there, I'm <strong>Huzaifa Bilal</strong>, a dedicated full stack developer pursuing a Computer Science degree at FAST National University. With expertise in React, Node.js, GraphQL, and Next.js, I love creating dynamic web experiences. Problem-solving is my passion, driving me to craft seamless front-end interfaces and robust back-end systems. I'm always learning and staying ahead of tech trends, committed to making impactful contributions to the digital world. Let's embark on this coding journey together!
                 </p>
@@ -228,7 +232,7 @@ export default function Home() {
 
               <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
 
-                <div class={`rounded-lg overflow-hidden shadow-md ${darkMode ? 'bg-white' : ' bg-gray-800'}`}>
+                <div data-aos="fade-up" class={`rounded-lg overflow-hidden shadow-md ${darkMode ? 'bg-white' : ' bg-gray-800'}`}>
                   <Image src="/images/blog_gen.png" width={400} height={400} alt="blog" class="w-full h-44 object-cover" />
                   <div class="p-4 space-y-2">
                     <h3 class="text-xl font-medium text-slate-500">
@@ -251,7 +255,7 @@ export default function Home() {
                 </div>
 
 
-                <div class={`rounded-lg overflow-hidden shadow-md ${darkMode ? 'bg-white' : ' bg-gray-800'}`}>
+                <div data-aos="fade-up" class={`rounded-lg overflow-hidden shadow-md ${darkMode ? 'bg-white' : ' bg-gray-800'}`}>
                   <Image src="/images/fighter.jpg" width={360} height={300} alt="fighter" class="w-full h-44 object-cover" />
                   <div class="p-4 space-y-2">
                     <h3 class="text-xl font-medium text-slate-500">
@@ -274,7 +278,7 @@ export default function Home() {
                 </div>
 
 
-                <div class={`rounded-lg overflow-hidden shadow-md ${darkMode ? 'bg-white' : ' bg-gray-800'}`}>
+                <div class={`rounded-lg overflow-hidden shadow-md ${darkMode ? 'bg-white' : ' bg-gray-800'}`} data-aos="fade-up">
                   <Image src="/images/Vet.jpg" width={330} height={330} alt="vet" class="w-full h-44 object-cover" />
                   <div class="p-4 space-y-2">
                     <h3 class="text-xl font-medium text-slate-500">
@@ -310,26 +314,34 @@ export default function Home() {
                 <svg class={`h-12 mx-auto mb-3 ${darkMode ? 'text-gray-400' : ' text-gray-600'} `} viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor" />
                 </svg>
-                <blockquote>
-                  <p class={`text-2xl font-medium ${darkMode ? 'text-gray-900' : 'text-white'} `}>"I've found Next.js to be the perfect solution for both small projects and large-scale applications. It has become my go-to framework for web development, and I highly recommend it to fellow developers looking to elevate their frontend game and deliver exceptional digital experiences."</p>
-                </blockquote>
-                <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                  <Image height={20} width={20} class="w-6 h-6 rounded-full" src="/images/CTO.jpg" alt="profile picture" />
-                  <div class={`flex items-center divide-x-2 ${darkMode ? 'divide-gray-500' : ' divide-gray-700'}`}>
-                    <div class={`pr-3 font-medium ${darkMode ? 'text-gray-900' : ' text-white'}`}>Guillermo Rauch</div>
-                    <div class={`pl-3 text-sm font-light ${darkMode ? 'text-gray-500' : ' text-gray-400'}`}>CTO at LearnBoost</div>
-                  </div>
-                </figcaption>
+                <div data-aos="zoom-in"> 
+                  <blockquote>
+                    <p class={`text-2xl font-medium ${darkMode ? 'text-gray-900' : 'text-white'} `}>"I've found Next.js to be the perfect solution for both small projects and large-scale applications. It has become my go-to framework for web development, and I highly recommend it to fellow developers looking to elevate their frontend game and deliver exceptional digital experiences."</p>
+                  </blockquote>
+                  <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                    <Image height={20} width={20} class="w-6 h-6 rounded-full" src="/images/CTO.jpg" alt="profile picture" />
+                    <div class={`flex items-center divide-x-2 ${darkMode ? 'divide-gray-500' : ' divide-gray-700'}`}>
+                      <div class={`pr-3 font-medium ${darkMode ? 'text-gray-900' : ' text-white'}`}>Guillermo Rauch</div>
+                      <div class={`pl-3 text-sm font-light ${darkMode ? 'text-gray-500' : ' text-gray-400'}`}>CTO at LearnBoost</div>
+                    </div>
+                  </figcaption>
+                </div>
+
               </figure>
             </div>
           </section>
 
-          <section id='contact'>
-            <div className=" justify-center max-h-screen-2xl pt-10 items-center flex">
-              <div className="px-4 mx-auto max-w-screen-md">
-                <h2 className="mb-4 text-5xl leading-tight font-extrabold text-center text-orange-500 sm:text-5xl">Contact Me</h2>
-                <p className={`mb-8 lg:mb-16 font-light text-center ${darkMode ? 'text-gray-500' : ' text-gray-400'} sm:text-xl`}>Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let me know.</p>
-                <form className="space-y-8" onSubmit={sendMessageHandler}>
+          <section id='contact' className="sm:flex justify-center sm:items-center  mt-8">
+            <div className="sm:flex max-w-screen-2xl mt-5">
+              {/* Contact Details */}
+              <div className="sm:w-1/2 p-4" data-aos="fade-up">
+                <h2 className="mb-4 text-5xl leading-tight font-extrabold text-orange-500 sm:text-5xl">Contact Me</h2>
+                <p className={`mb-8 lg:mb-16 font-light ${darkMode ? 'text-gray-500' : 'text-gray-400'} sm:text-xl`}>Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let me know.</p>
+                {/* Contact details here */}
+              </div>
+              {/* Form */}
+              <div className="sm:w-1/2 p-4">
+                <form className="space-y-8" onSubmit={sendMessageHandler} data-aos="fade-left">
                   <div>
                     <label for="email" className={`block mb-2 text-sm font-medium ${darkMode ? 'text-gray-900' : 'text-gray-300'} `}>Your email</label>
                     <input type="email" id="email" className={`shadow-sm text-sm rounded-lg border block w-full p-2.5 ${darkMode ? 'bg-slate-200  border-gray-300 text-gray-900  focus:ring-primary-500 focus:border-primary-500' : 'bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light'}`} placeholder="name@domain.com" required
@@ -357,13 +369,14 @@ export default function Home() {
             </div>
           </section>
 
+
         </div>
 
 
 
 
         <section>
-          <footer class={`p-4 sm:p-6 ${darkMode ? 'bg-slate-200' : 'bg-gray-800'} pt-5`}>
+          <footer class={`p-4 sm:p-6 ${darkMode ? 'bg-slate-200' : 'bg-gray-800'}`}>
             <div class="mx-auto max-w-screen-xl">
               <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
