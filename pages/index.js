@@ -165,7 +165,7 @@ export default function Home() {
 
 
 
-        <div class={darkMode ? 'bg-white' : 'bg-gray-900'} >
+        <div class={`${darkMode ? 'bg-white' : 'bg-gray-900'} overflow-hidden`} >
 
           <section id='hero' class=" pt-5 max-[768px]:justify-center max-[768px]:text-center max-[768px]:pt-20" data-aos="zoom-in-up">
             <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
@@ -375,8 +375,8 @@ export default function Home() {
 
 
 
-        <section>
-          <footer class={`p-4 sm:p-6 ${darkMode ? 'bg-slate-200' : 'bg-gray-800'}`}>
+        <section className='overflow-hidden'>
+          <footer class={`p-4 sm:p-6 ${darkMode ? 'bg-slate-200' : 'bg-gray-800'} ov`}>
             <div class="mx-auto max-w-screen-xl">
               <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
