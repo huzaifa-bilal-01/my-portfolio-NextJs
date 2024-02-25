@@ -206,7 +206,7 @@ export default function Home() {
           </section>
 
 
-          <section class=" py-8">
+          <section class="py-8 mr-[16px] ml-[16px]">
             <div class="max-w-screen-md mx-auto text-center">
               <h2 class="pb-4 text-5xl font-extrabold text-orange-500 sm:text-5xl">
                 GET TO KNOW ME
