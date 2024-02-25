@@ -299,6 +299,28 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
+
+                <div class={`rounded-lg overflow-hidden shadow-md ${darkMode ? 'bg-white' : ' bg-gray-800'}`} data-aos="fade-up">
+                  <Image src="/images/go.png" width={330} height={330} alt="vet" class="w-full h-44 object-cover" />
+                  <div class="p-4 space-y-2">
+                    <h3 class="text-xl font-medium text-slate-500">
+                      Rest Api Blog Aggregator
+                    </h3>
+                    <p class={`text-md font-normal ${darkMode ? 'text-gray-600' : 'text-gray-300'} `}>
+                    Developed a robust REST API Blog Aggregator using the Go programming language which serves as a centralized platform for fetching and aggregating blogs from various sources.
+                    </p>
+                    <a href="https://github.com/huzaifa-bilal-01/Web-Development-MERN-Course-Project-2022.git" title=""
+                      class={`text-white inline-flex items-center px-4 py-2 text-sm font-medium rounded-md ${darkMode ? 'bg-primary-700 hover:bg-primary-800' : 'bg-primary-600 hover:bg-primary-700'}   `}>
+                      Go to Github
+                      <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -336,7 +358,7 @@ export default function Home() {
               {/* Contact Details */}
               <div className="sm:w-1/2 p-4" data-aos="fade-up">
                 <h2 className="mb-4 text-5xl leading-tight font-extrabold text-orange-500 sm:text-5xl">Contact Me</h2>
-                <p className={`mb-8 lg:mb-16 font-light ${darkMode ? 'text-gray-500' : 'text-gray-400'} sm:text-xl`}>Got a technical issue? Contact me at <span className='text-blue-500'>huzaifabilal2002@gmail.com</span> or send me custom message. Thanks!</p>
+                <p className={`mb-8 lg:mb-16 font-light ${darkMode ? 'text-gray-500' : 'text-gray-400'} sm:text-xl`}>Got a technical issue? Contact me at <span className='text-blue  -500'>huzaifabilal2002@gmail.com</span> or send me custom message. Thanks!</p>
                 {/* Contact details here */}
               </div>
               {/* Form */}
